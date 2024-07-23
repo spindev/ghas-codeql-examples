@@ -1,0 +1,5 @@
+name: spindev/custom-python-query
+version: 0.0.1
+dependencies:
+  codeql/python-all: "*"
+extractor: python
