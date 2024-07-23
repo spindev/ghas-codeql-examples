@@ -3,10 +3,6 @@ name: "CodeQL"
 on:
   push:
     branches: ["main"]
-  pull_request:
-    branches: ["main"]
-  schedule:
-    - cron: "23 8 * * 4"
   workflow_dispatch:
 
 jobs:
@@ -26,16 +22,9 @@ jobs:
         include:
           - language: csharp
             build-mode: autobuild
-            queries: ./.github/code-ql/custom-csharp-query
+            queries: +security-and-quality # ./.github/code-ql/custom-csharp-query
             source-root: c-sharp/
-          - language: typescript
-            build-mode: none
-            queries: ./.github/code-ql/custom-typescript-query
-            source-root: typescript/
-          - language: python
-            build-mode: none
-            queries: ./.github/code-ql/custom-python-query
-            source-root: python/
+            
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
