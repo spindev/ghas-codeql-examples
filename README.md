@@ -2,6 +2,9 @@
 
 This reposistory contains some example and custom CodeQL queries for c# and typescript.
 
+
+
+
 # Resources
 
 - https://github.blog/2022-04-19-sharing-security-expertise-through-codeql-packs-part-i/
